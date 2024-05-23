@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Book Spa</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+   
+    
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" id="home">
+        <div class="container">
+            <a href="#" class="navbar-brand">
+                <img src="assets/logo.PNG" alt="The Book Spa" class="logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#signin-modal">Sign In</button>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#shop">Shop</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#newsletter">News & Events</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#ourstory">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                   
+                    <li class="nav-item">
+                        <a class="nav-link" href="checkout.html" onclick="showCart()">
+                          <i class="fas fa-shopping-cart cart-icon"></i>
+                          <span class="icon-text">Your Cart</span>
+                        </a>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- Sign-In Modal -->
+    <!-- This modal will be used to allow users to sign in to their accounts -->
+    <div class="modal fade" id="signin-modal" tabindex="-1" aria-labelledby="signinModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="signinModalLabel">Sign In</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="signin-form">
+                        <!-- User will be required to enter their email address and password to sign in -->
+                        <div class="mb-3">
+                            <label for="signin-email" class="form-label">Email address</label>
+                            <input type="email" class="form-control" id="signin-email" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="signin-password" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="signin-password" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Sign In</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <!-- This section will contain the main content of the website, including the main image and button to shop now -->
+    <main class="container my-5">
+        <div class="row">
+            <div class="col-12">
+                <div class="main-image">
+                    <img src="assets\cov3.jpg" alt="Store" class="img-fluid w-100">
+                    <div class="main-image-text text-center">
+                        <h2 class="text-danger" >Our Favorite Brands</h2>
+                        <a href="#shop" class="btn btn-primary">Shop Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <!-- Hero Section -->
+    <!-- This section will contain the main image and text at the top of the website -->
+    <section class="container-fluid hero bg-danger-subtle text-center py-5">
+        <h1 class="text text-danger">Welcome to The Book Spa</h1>
+        <p class="text text-dark">Your Ultimate Book Destination</p>
+    </section>
+
+    <!-- Favorite Genres -->
+    <!-- This section will contain a row of buttons representing the different genres of books -->
+    <section class="container my-5">
+        <h2 class="text-center text-success">Our Favorite Genres</h2>
+        <div class="row text-center">
+            <div class="col-md-2 col-sm-4 col-6">Fiction</div>
+            <div class="col-md-2 col-sm-4 col-6">Educational</div>
+            <div class="col-md-2 col-sm-4 col-6">Self-Developement</div>
+            <div class="col-md-2 col-sm-4 col-6">Romance</div>
+            <div class="col-md-2 col-sm-4 col-6">Bussiness</div>
+            <div class="col-md-2 col-sm-4 col-6">Fantasy</div>
+        </div>
+    </section>
+
+    <!-- New Arrivals Carousel -->
+    <!-- This section will contain a carousel of book cards that are new arrivals. Each card will have an image, title, author, genre, rating, and price. The user can click the "Buy Now" button to add the book to their cart -->
+    <section class="container my-5" id="shop">
+        <h2 class="text-center">New Arrivals</h2>
+        <div id="newArrivalsCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="row">
+                        <!-- book card -->
+                        <div class="col-md-3 col-sm-6 mb-4">
+                            <div class="card h-100">
+                                <img src="assets\7-habits-of-successive-teens.jpg" class="card-img-top" alt="7 Habits Of successful Teen">
+                                <div class="card-body">
+                                    <h5 class="card-title">7 Habits Of successful Teen</h5>
+                                    <p class="card-text">Author: Sean Covey</p>
+                                    <p class="card-text">Genre: Business</p>
+                                    <p class="card-text">Rating: 4.5/5</p>
+                                    <p class="card-text">$18.99</p>
+                                    <button class="btn btn-primary" onclick="addToCart('7 Habits Of successful Teen')">Buy Now</button>
+                                </div>
+                            </div>
+                        </div> 
+                    </div>
+                </div>
+                    <!-- we can Add more carousel items here  -->
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#newArrivalsCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#newArrivalsCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </section>
+    <!--trial-->
+
+
+    <!-- All Items Section with Filters -->
+    <section class="container my-5">
+        <h2 class="text-center">All Items</h2>
+        <div class="row mb-4 py-4">
+            <div class="col-md-4">
+                <input type="text" id="authorFilter" class="form-control" placeholder="Filter by Author">
+                <!-- TODO: Add input validation for author filter -->
+            </div>
+            <div class="col-md-4">
+                <input type="number" id="priceFilter" class="form-control" placeholder="Filter by Price">
+                <!-- TODO: Add input validation for price filter -->
+            </div>
+            <div class="col-md-4">
+                <input type="text" id="genreFilter" class="form-control" placeholder="Filter by Genre">
+                <!-- TODO: Add input validation for genre filter -->
+            </div>
+        </div>
+        <div class="row" id="allItems">
+            <div class="col-md-3 col-sm-6 mb-4">
+                <!-- Book cards to be dynamically generated here -->
+            </div>
+            
+        </div>
+    </section>
+
+
+
+    <!-- Our Story -->
+    <section class="container-fluid bg-danger-subtle py-5" id="ourstory">
+        <div class="container text-center">
+            <div class="badge text-bg-danger text-wrap" style="width: 10rem;">
+                <h2>Our Story</h2>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <p id="story-text">Book Haven started as a small bookstore in the heart of the city. With a passion for books and a commitment to our readers, we’ve grown into a beloved community hub. Whether you’re looking for the latest bestseller or a classic, we have something for every reader.</p>
+                    <p id="more-text" style="display: none;">Our journey began in a cozy corner of the city, and over the years, we have expanded to multiple locations, offering a vast selection of books and a warm, welcoming atmosphere. We host regular events, author signings, and book clubs to foster a love for reading in our community. Our mission is to create a space where book lovers can come together to discover, learn, and share their passion for literature.</p>
+                    <a href="#" id="read-more-btn" class="btn btn-dark">Read More</a>
+                </div>
+                <div class="col-md-6">
+                    <img src="assets/story.jpg" class="img-fluid" alt="Our Store's Image">
+                    <img src="assets/story2.jpg" class="img-fluid" alt="Our Store's Image">
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+<!-- contact form -->
+  <!-- form-control, form-label, form-select, input-group, input-group-text -->
+  <section id="contact">
+    <div class=" bg-danger-subtle">
+      
+      <div class="text-center">
+        <h2>FOR COMMENTS AND ENQUIRY</h2>
+        <p class="lead">Questions to ask? Fill out the form to contact our bookstore directly...</p>
+      </div>
+      <div class="row justify-content-center my-5">
+        <div class="col-lg-6">
+          
+          <form>
+            <label for="email" class="form-label">Email address:</label>
+            <div class="input-group mb-4">
+              <span class="input-group-text">
+                <i class="bi bi-envelope-fill text-secondary"></i>
+              </span>
+              <input type="text" id="email" class="form-control" placeholder="e.g. omondi@example.com" />
+              <!-- tooltip -->
+              <span class="input-group-text">
+                <span class="tt" data-bs-placement="bottom" title="Enter an email address we can reply to.">
+                  <i class="bi bi-question-circle text-muted"></i>
+                </span>
+              </span>
+            </div>
+            <label for="name" class="form-label">Name:</label>
+            <div class="mb-4 input-group">
+              <span class="input-group-text">
+                <i class="bi bi-person-fill text-secondary"></i>
+              </span>
+              <input type="text" id="name" class="form-control" placeholder="e.g. omondi" />
+              <!-- tooltip -->
+              <span class="input-group-text">
+                <span class="tt" data-bs-placement="bottom" title="Pretty self explanatory really...">
+                  <i class="bi bi-question-circle text-muted"></i>
+                </span>
+              </span>
+            </div>
+            <label for="subject" class="form-label">What is your question about?</label>
+            <div class="mb-4 input-group">
+              <span class="input-group-text">
+                <i class="bi bi-chat-right-dots-fill text-secondary"></i>
+              </span>
+              <select class="form-select" id="subject">
+                <option value="pricing" selected>Pricing query</option>
+                <option value="content">Book query</option>
+                <option value="other">Other query</option>
+              </select>
+            </div>
+            <div class="mb-4 mt-5 form-floating">
+              <textarea class="form-control" id="query" style="height: 140px" placeholder="query"></textarea>
+              <label for="query">Your query...</label>
+            </div>
+            <div class="mb-4 text-center">
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="my-5">
+    <div class="container my-5">
+        <h2 class="text-center">Our Recommendation For You</h2>
+        <div class="row" id="allItems">
+            <div class="col-md-3 col-sm-6 mb-4">
+                <div class="card h-100">
+                    <img src="assets\game-of-thrones.jpg" class="card-img-top" alt="Game Of Thrones">
+                    <div class="card-body">
+                        <h5 class="card-title">Game Of Thrones</h5>
+                        <p class="card-text">Author: George Martin</p>
+                        <p class="card-text">Genre: Mystry</p>
+                        <p class="card-text">Rating: 4.5/5</p>
+                        <p class="card-text">$17.99</p>
+                        <button class="btn btn-primary" onclick="addToCart('Game Of Thrones')">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+            <!-- More book cards can be added here -->
+            <div class="col-md-3 col-sm-6 mb-4">
+                <div class="card h-100">
+                    <img src="assets\beyond-order.jpg" class="card-img-top" alt="Beyond Order">
+                    <div class="card-body">
+                        <h5 class="card-title">Beyond Order</h5>
+                        <p class="card-text">Author: Jordan p Peterson</p>
+                        <p class="card-text">Genre: Self-Developement</p>
+                        <p class="card-text">Rating: 4.1/5</p>
+                        <p class="card-text">$16.00</p>
+                        <button class="btn btn-primary" onclick="addToCart('Beyond Order')">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6 mb-4">
+                <div class="card h-100">
+                    <img src="assets\blue-ocean.jpg" class="card-img-top" alt="Blue Ocean Strategy">
+                    <div class="card-body">
+                        <h5 class="card-title">Blue Ocean Strategy</h5>
+                        <p class="card-text">Author: Chan Kim</p>
+                        <p class="card-text">Genre: Business</p>
+                        <p class="card-text">Rating: 4.2/5</p>
+                        <p class="card-text">$18.99</p>
+                        <button class="btn btn-primary" onclick="addToCart('Blue Ocean Strategy')">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+  
+<!-- Get Updates Section -->
+<section class="bg-info" id="newsletter">
+    <!-- This section will be used to allow users to register for updates on new books and restocks. -->
+    <div class="container">
+        <div class="text-center">
+            <h2>Join the Reading Revolution</h2>
+            <p class="lead">Get the latest updates as on new books and Restocks...</p>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-md-8 text-center">
+                <p class="text-muted my-4">
+                    Here at The Book Spa, we curate a selection of books that cater to every taste and preference. Whether you're a lover of gripping thrillers, romantic tales, enlightening non-fiction, or heartwarming stories, we have something for you.
+                    
+                    Take a moment to explore our collection, find your next great read, and let yourself be whisked away by the magic of books. Happy reading!
+                </p>
+                <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#reg-modal">
+                    Register for Updates
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Register Modal -->
+<div class="modal fade" id="reg-modal" tabindex="-1" aria-labelledby="regModalLabel" aria-hidden="true">
+    <!-- This modal will be used to allow users to register for updates. -->
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="regModalLabel">Register for Updates</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form id="reg-form">
+                    <!-- This form will be used to gather user information for registration. -->
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Name</label>
+                        <input type="text" class="form-control" id="name" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email address</label>
+                        <input type="email" class="form-control" id="email" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Top 10 Best Sellers Carousel -->
+<section class="container my-5">
+    <h2 class="text-center">Top 10 Best Sellers</h2>
+    <div id="bestSellersCarousel" class="carousel slide" data-bs-ride="carousel">
+        <!-- This carousel will be used to display the top 10 best selling books. -->
+        <div class="carousel-inner" id="bestSellersCarouselInner">
+            <!-- Carousel items will be dynamically generated here. -->
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#bestSellersCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#bestSellersCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+</section>
+
+    <!-- Footer -->
+    <footer class="container-fluid bg-dark text-light py-4" id="contact">
+        <div class="container text-center">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>Address</h5>
+                    <p>123 Diamond Street, Nairobi City, Kenya</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Our Working Hours</h5>
+                    <p>Mon-Fri: 8am - 6pm</p>
+                    <p>Sat: 9am - 4pm</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Connect with Us</h5>
+                    <div class="container">
+                        <p>&copy; 2024 The Book Spa. All rights reserved.</p>
+                        <a href="https://www.facebook.com" target="_blank" rel="noopener" title="Visit us on Facebook" class="text-decoration-none">
+                            <i class="bi bi-facebook"></i>
+                        </a>
+                        <a href="https://www.instagram.com" target="_blank" rel="noopener" title="Follow us on Instagram" class="text-decoration-none">
+                            <i class="bi bi-instagram"></i>
+                        </a>
+                        <a href="https://www.twitter.com" target="_blank" rel="noopener" title="Connect with us on Twitter" class="text-decoration-none">
+                            <i class="bi bi-twitter"></i>
+                        </a>
+                        <a href="https://www.whatsapp.com" target="_blank" rel="noopener" title="Chat with us on WhatsApp" class="text-decoration-none">
+                            <i class="bi bi-whatsapp"></i>
+                        </a>
+                        <a href="https://www.linkedin.com" target="_blank" rel="noopener" title="Connect with us on LinkedIn" class="text-decoration-none">
+                            <i class="bi bi-linkedin"></i>
+                        </a>
+                        <a href="https://www.youtube.com" target="_blank" rel="noopener" title="Watch our videos on YouTube" class="text-decoration-none">
+                            <i class="bi bi-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</body>
+    
+    
+</body>
+</html>
+
+

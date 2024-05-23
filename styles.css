@@ -1,0 +1,128 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+.logo {
+    width: 150px;
+}
+
+.hero {
+    background: url('assets/hero-bg.jpg') no-repeat center center/cover;
+    color: #fff;
+}
+
+.card {
+    height: 100%;
+}
+
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+
+.footer {
+    background-color: #f8f9fa;
+}
+
+/* Navigation */
+.nav-link {
+    color: #000;
+}
+
+.nav-link:hover {
+    color: #007bff;
+}
+
+/* Carousel */
+.carousel-item {
+    height: 300px;
+}
+
+.carousel-item img {
+    height: 100%;
+    object-fit: cover;
+}
+
+.card {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-body {
+    flex: 1;
+}
+
+.img-fluid {
+    max-height: 200px;
+    width: auto;
+    object-fit: cover;
+}
+
+/* Instagram Feed */
+section img {
+    width: 100%;
+    height: auto;
+}
+.subtotal {
+    font-weight: bold;
+}
+.navbar {
+    margin-bottom: 20px;
+}
+.carousel-item img {
+    max-height: 300px;
+    object-fit: cover;
+}
+.product-details .card img {
+    max-height: 200px;
+    object-fit: cover;
+}
+
+/* contact styles */
+.bi-facebook {
+    font-size: 1.5rem;
+    color: #1609cf;
+}
+
+.bi-instagram {
+    font-size: 1.5rem;
+    color: #f46309;
+}
+
+.bi-twitter {
+    font-size: 1.5rem;
+    color: #09aaf4;
+}
+.bi-linkedin {
+    font-size: 1.5rem;
+    color: #14dbe9;
+}
+.bi-yotube {
+    font-size: 1.5rem;
+    color: #f40909;
+}
+.bi-whatsapp {
+    font-size: 1.5rem;
+    color: #09f409;
+}
+#bestSellersCarouselInner {
+    display: flex;
+  }
+.cart-icon {
+    font-size: 50px;
+    color: #f00ace;
+}
+.book-icon {
+    font-size: 50px;
+    color: #ebf308;
+}
+
+.icon-text {
+    display: block; 
+    text-align: center; 
+    font-size: 14px; 
+    margin-top: 5px; 
+}

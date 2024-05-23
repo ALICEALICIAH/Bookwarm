@@ -13,7 +13,7 @@ document.getElementById('signin-form').addEventListener('submit', function(event
         alert('Successfully signed in!');
         // Here you would typically send the data to the server
         document.getElementById('signin-form').reset();
-        var signinModal = new bootstrap.Modal(document.getElementById('signin-modal'));
+        let signinModal = new bootstrap.Modal(document.getElementById('signin-modal'));
         signinModal.hide();
     } else {
         alert('Please fill out both fields.');
@@ -584,15 +584,6 @@ function updateCartUI() {
     subtotalElement.textContent = subtotal.toFixed(2);
 }
 
-/**
- * Add an event listener to the submit event of the signin form to handle signing in
- * @description Handles the submission of the signin form
- * @param {Event} event The submit event of the signin form
- */
-/**
- * Event listeners for filtering books
- * @description Add event listeners for the filter inputs to update the list of books
- */
 // Event listener for author filter
 document.getElementById('authorFilter').addEventListener('input', function() {
     renderBooks({ author: this.value });
